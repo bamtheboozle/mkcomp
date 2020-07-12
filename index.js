@@ -1,40 +1,34 @@
 #!/usr/bin/env node
-const files = require("./lib/files");
+
 const chalk = require("chalk");
-const { conf, initStore } = require("./lib/store");
-const { extractArgs } = require("./lib/args");
+const argv = require("minimist")(process.argv.slice(2));
+
+const { conf } = require("./lib/store");
+const argsHandler = require("./lib/args");
 
 const main = async () => {
-  const args = extractArgs();
-
-  if (!conf.get("isConfigured") || args.init) {
-    await initStore();
-    if (args.init) return;
+  // handle init
+  if (argv.init || argv.i) {
+    return argsHandler.init(argv.init || argv.i);
   }
 
-  if (!args.name || args.name === "") {
-    console.log(chalk.red("No name was given for the component."));
-    return;
+  // handle list projects
+  if (argv.list || argv.lp) {
+    return argsHandler.list();
   }
-  const answers = conf.get("answers");
 
-  let path = args.name;
-  if (args.path) {
-    path = `${args.path}/${args.name}`;
+  // handle switch between project configs
+  if (argv.switch || argv.sw) {
+    return argsHandler.switch();
   }
-  if (files.directoryExists(path)) {
-    files.rmdir(path);
+
+  // clear all configs
+  if (argv.clear) {
+    return conf.clear();
   }
-  files.createDir(path).then(() => {
-    files.createFiles({
-      path,
-      componentName: args.name,
-      answers,
-    });
-    console.log(
-      chalk.green(`${args.name} created successfully at ${args.path}.`)
-    );
-  });
+
+  // default, create components
+  return argsHandler.create(argv);
 };
 
 main();
