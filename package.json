@@ -1,0 +1,23 @@
+{
+  "name": "@bamtheboozle/mkcomp",
+  "version": "0.0.2",
+  "description": "A CLI to bootstrap the creation of react components",
+  "main": "index.js",
+  "bin": {
+    "mkcomp": "./index.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [],
+  "author": "Dragos-Paul Marinescu",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "configstore": "^5.0.1",
+    "inquirer": "^7.3.1",
+    "minimist": "^1.2.5",
+    "mkdirp": "^1.0.4",
+    "touch": "^3.1.0"
+  }
+}
