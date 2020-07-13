@@ -24,13 +24,17 @@ This is boring and takes a lot of time for what can be done with a single comman
 
 1. In the project root, run `mkcomp Button -p src/features/components/LoginButton`
 
-2. There is no step 2!
+2. There is no step 2.
 
 Simple, right? `mkcomp` takes care of the folders for you. It recursively creates folders that don't exist. If the path supplied as args already has data in it, it will ask you to confirm overwriting it by using the `-f` or `--force` flag.
 
 ## Install:
 
-Install globally with `npm install -g mkcomp`
+Install with `npm install mkcomp` locally, or - globally with `npm install -g mkcomp` to have the command available everywhere.
+
+## Platform support:
+
+Works on both Windows and Unix-based systems (macos..etc)
 
 ## Options:
 

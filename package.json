@@ -1,6 +1,6 @@
 {
   "name": "mkcomp",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "A CLI to bootstrap the creation of react components",
   "main": "index.js",
   "bin": {
@@ -9,7 +9,17 @@
   "publishConfig": {
     "access": "public"
   },
-  "keywords": [],
+  "keywords": [
+    "mkcomp",
+    "create react component",
+    "make component",
+    "react component",
+    "react component folder",
+    "recursive",
+    "cli",
+    "cli tool",
+    "native cli tool"
+  ],
   "author": "Dragos-Paul Marinescu",
   "license": "ISC",
   "dependencies": {
