@@ -35,10 +35,17 @@ Install globally with `npm install -g mkcomp`
 ## Options:
 
 `mkcomp --init | -i {name}` - Initialize the config files based on your projects. Name is optional, default profile is "default".
+
 `mkcomp -n | --name ComponentName -p | --path src/Components` - Will create a component folder based on your config at the given path. The folders will be created recursively, so you don't need to worry about any of the n-level deep folders not existing.
+
 If a folder already exists at that path, the cli tool will console an error and will not overwrite. use the `-f | --force` flag for that.
+
 `mkcomp Component1 Component2 Component3 -p src/Components` - You can also create multiple components at once by using default args as a whitespace separated value.
+
 `mkcomp --lp | --list` - View available project configurations.
+
 `mkcomp -sw | --switch` - Switch configs between projects. Useful when working with multiple projects and each have different folder structures.
+
 `mkcomp --clear` - Reset all configurations and start fresh.
+
 `mkcomp ComponentName -p src/Components --skiptest --skipstyle`. Will generate the component based on your config, but will explicitly skip test or style files based on the arguments. Useful when you generally want test files and styles generated, but not for a particular component.

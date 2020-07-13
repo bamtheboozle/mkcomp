@@ -1,6 +1,6 @@
 {
   "name": "mkcomp",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "A CLI to bootstrap the creation of react components",
   "main": "index.js",
   "bin": {
