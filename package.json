@@ -1,6 +1,6 @@
 {
   "name": "mkcomp",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A CLI to bootstrap the creation of react components",
   "main": "index.js",
   "bin": {
@@ -13,11 +13,11 @@
   "author": "Dragos-Paul Marinescu",
   "license": "ISC",
   "dependencies": {
-    "chalk": "^4.1.0",
-    "configstore": "^5.0.1",
-    "inquirer": "^7.3.1",
-    "minimist": "^1.2.5",
-    "mkdirp": "^1.0.4",
-    "touch": "^3.1.0"
+    "chalk": "4.1.0",
+    "configstore": "5.0.1",
+    "inquirer": "7.3.1",
+    "minimist": "1.2.5",
+    "mkdirp": "1.0.4",
+    "touch": "3.1.0"
   }
 }
